@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2013 at 03:51 PM
+-- Generation Time: Sep 26, 2013 at 09:39 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS `post` (
   `post_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_id` int(10) unsigned NOT NULL,
   `post_text` text NOT NULL,
-  PRIMARY KEY (`post_id`)
+  PRIMARY KEY (`post_id`),
+  KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
@@ -63,4 +64,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
 (1, 'demo', 'demo', 0);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `post`
+--
+ALTER TABLE `post`
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 SET FOREIGN_KEY_CHECKS=1;
