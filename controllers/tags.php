@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Kerli & Jaak
- * Date: 26.09.13
- * Time: 10:55
- * To change this template use File | Settings | File Templates.
- */
+
 
 class tags extends Controller{
 	public function index(){
@@ -13,4 +7,13 @@ class tags extends Controller{
 
 	}
 
-}
+//	function view() {
+//		$tag_id = $this->params[0];
+//		$this->tag = get_one("SELECT * FROM tag NATURAL JOIN user WHERE tag_id='$tag_id'");
+//	}
+
+
+
+	}
+
+?>

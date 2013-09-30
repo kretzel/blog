@@ -45,9 +45,9 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="<?=BASE_URL?>">Post</a></li>
-				<li><a href="<?=BASE_URL?>tags">Tags</a></li>
-				<li><a href="<?=BASE_URL?>users">Users</a></li>
+				<li <?= $controller == 'posts' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>">Post</a></li>
+				<li <?= $controller == 'tags' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>tags">Tags</a></li>
+				<li <?= $controller == 'users' ? 'class="active"' : ''?>><a href="<?=BASE_URL?>users">Users</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 					<ul class="dropdown-menu">
