@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2013 at 10:21 AM
+-- Generation Time: Oct 03, 2013 at 09:35 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -25,8 +25,10 @@ USE `blog`;
 
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
-  `comment_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `comment_name` varchar(25) NOT NULL,
+  `comment_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `comment_text` text NOT NULL,
+  `comment_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
