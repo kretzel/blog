@@ -10,7 +10,7 @@
 		<hr>
 	</div>
 	<?foreach ($tags as $tag):?>
-		<a href="#"><span class="label label_info"><?=$tag['tag_name']?></span></a>
+		<a href="<?=BASE_URL?>tags/view/<?=$tag['tag_name']?>"><span class="label label-info"><?=$tag['tag_name']?></span></a>
 	<?endforeach?>
 
 	<!-- begin htmlcommentbox.com -->

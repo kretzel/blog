@@ -3,7 +3,7 @@
 class posts extends Controller{
 
 	function index(){
-		$this->posts = get_all("SELECT * FROM post");
+		$this->posts = get_all("SELECT * FROM post NATURAL JOIN user");
 		//prepare tags array
 		$_tags=get_all("SELECT * FROM post_tags NATURAL JOIN tag");
 		foreach ($_tags as $tag){
